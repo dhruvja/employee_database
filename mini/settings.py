@@ -34,6 +34,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'api.apps.ApiConfig',
+    # 'admin_volt.apps.AdminVoltConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -43,7 +44,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
     'ckeditor',
-    'imagekit'
+    'imagekit',
+    'import_export'
 ]
 
 MIDDLEWARE = [
@@ -83,7 +85,7 @@ WSGI_APPLICATION = 'mini.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'mini_project',
+        'NAME': 'employee_management',
         'USER': 'root',
         'PASSWORD': 'password',
         'HOST': 'localhost'
