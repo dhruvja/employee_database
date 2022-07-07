@@ -267,7 +267,7 @@ class AwardsAndRecognistionTeachersStudents(models.Model):
     document=models.FileField(blank=True,null=True)
 
     def __str__(self):
-        return self.activity_name
+        return self.awardee_name
 
 
 class StudentsHigherEducation(models.Model):
