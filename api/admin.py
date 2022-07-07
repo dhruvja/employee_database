@@ -33,6 +33,7 @@ class BosAdmin(ImportExportModelAdmin, ExportActionMixin, admin.ModelAdmin):
 class ConferenceAttendedByTeachersAdmin(ImportExportModelAdmin, ExportActionMixin,admin.ModelAdmin):
     date_hierarchy = 'date'
     list_display = ('teacher_name', 'conference_name')
+    list_filter = ('type')
 
 admin.site.register(AwardsAndRecognistionTeachersStudents, AwardsAndRecognistionTeachersStudentsAdmin)
 admin.site.register(Bos, BosAdmin)
