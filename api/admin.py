@@ -14,7 +14,6 @@ admin.site.register(Proposal)
 # admin.site.register(Awards)
 admin.site.register(Grant)
 admin.site.register(ConferenceConductedInCollege)
-admin.site.register(ConferenceAttendedByTeachers)
 admin.site.register(SpecialLectureInCollege)
 admin.site.register(ListMajorMinorResearchProjects)
 admin.site.register(StudentsHigherEducation)
@@ -31,8 +30,12 @@ class AwardsAndRecognistionTeachersStudentsAdmin(ImportExportModelAdmin, ExportA
 class BosAdmin(ImportExportModelAdmin, ExportActionMixin, admin.ModelAdmin):
     date_hierarchy = 'date'
 
+class ConferenceAttendedByTeachersAdmin(admin.ModelAdmin):
+    list_display = ('teacher_name', 'conference_name')
+
 admin.site.register(AwardsAndRecognistionTeachersStudents, AwardsAndRecognistionTeachersStudentsAdmin)
 admin.site.register(Bos, BosAdmin)
+admin.site.register(ConferenceAttendedByTeachers, ConferenceAttendedByTeachersAdmin)
 
 
 
