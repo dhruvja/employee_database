@@ -260,7 +260,7 @@ class AwardsAndRecognistionTeachersStudents(models.Model):
     activity_name=models.CharField(max_length=255)
     award_name=models.CharField(max_length=255)
     awarding_organization_details=models.TextField()
-    awardee_name = models.CharField(max_length=255)
+    awardee_name = models.CharField(max_length=255, default="")
     date=models.DateField()
     institution_name=models.CharField(max_length=255)
     type=models.CharField(max_length=255,choices=(("National","National"),("International","International")))
