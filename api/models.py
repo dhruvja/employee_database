@@ -31,7 +31,7 @@ class NewCoursesIntroduced(models.Model):
     document = models.FileField(blank=True, null=True)
 
     def __str__(self):
-        return self.name
+        return self.course_name
 
 
 class Consultants(models.Model):
@@ -260,6 +260,7 @@ class AwardsAndRecognistionTeachersStudents(models.Model):
     activity_name=models.CharField(max_length=255)
     award_name=models.CharField(max_length=255)
     awarding_organization_details=models.TextField()
+    awardee_name = models.CharField(max_length=255)
     date=models.DateField()
     institution_name=models.CharField(max_length=255)
     type=models.CharField(max_length=255,choices=(("National","National"),("International","International")))
