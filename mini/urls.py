@@ -22,7 +22,7 @@ from django.conf import settings
 from django.contrib import admin
 from django.utils.html import format_html
 
-site_header = 'Faculty Database'
+site_header = 'Telecom Faculty Database'
 admin.site.site_header = format_html(site_header)
 
 
