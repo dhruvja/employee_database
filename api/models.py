@@ -4,9 +4,6 @@ from django.contrib.auth.models import User
 
 
 # Create your models here.
-
-
-
 class Bos(models.Model):
     program_name = models.CharField(max_length=255)
     name_of_course = models.CharField(max_length=255)
@@ -107,7 +104,7 @@ class Journal(models.Model):
     document=models.FileField(blank=True, null=True)
 
     def __str__(self):
-        return self.journal_title
+        return self.author_name
 
 
 # class Awards(models.Model):
